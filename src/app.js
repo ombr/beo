@@ -20,4 +20,8 @@ menu = new UI.Menu({
   ]
 });
 
+menu.on('select', function(e) {
+  return menu.hide();
+});
+
 menu.show();

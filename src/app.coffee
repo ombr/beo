@@ -1,7 +1,5 @@
 UI = require('ui')
 Vector2 = require('vector2')
-
-
 menu = new (UI.Menu)(
   sections: [
     {
@@ -13,6 +11,8 @@ menu = new (UI.Menu)(
     }
   ]
 )
+menu.on 'select', (e)->
+  menu.hide()
 menu.show()
 # main = new (UI.Card)(
 #   title: 'Pebble.js'
