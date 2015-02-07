@@ -1,0 +1,24 @@
+{
+  "name": "frontend",
+  "gulpStartupTasks": [
+    "templates",
+    "coffee",
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "app",
+    "templates",
+    "css",
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "app_id": "f7edb3ac",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "10.39.235.15"
+    }
+  ]
+}

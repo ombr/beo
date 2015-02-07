@@ -1,0 +1,13 @@
+ion-view#login view-title="Hello, {{ user.username }}" cache-view="false"
+  ion-content
+    .list
+      .item.padding
+        button.button.button-block ng-click="login_deezer()" Login on deezer
+
+      .item
+        | {{ root.volume }}
+      .item.range.range-royal
+        i.icon.icon-volume-low
+        input type="range" name="volume" ng-model="root.volume" min="0" max="100"
+        i.icon.icon-volume-high
+
