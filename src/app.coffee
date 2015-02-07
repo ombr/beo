@@ -18,7 +18,7 @@ menu.on 'select', (e)->
     url: 'https://beo.firebaseio.com/ombr/theme.json',
     method: 'put',
     type: 'json',
-    data: '"'+e.item.title+'"'
+    data: e.item.title
   }, ((data)->
     console.log 'succes'
     menu.hide()
