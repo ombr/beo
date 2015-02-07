@@ -16,7 +16,7 @@ menu.on 'select', (e)->
   ajax({
     url: 'https://beo.firebaseio.com/ombr/theme.json',
     method: 'put',
-    data: e.item.title
+    data: '"'+e.item.title+'"'
   }, ((data)->
     console.log 'succes'
     menu.hide()
