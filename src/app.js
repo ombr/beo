@@ -27,6 +27,7 @@ menu.on('select', function(e) {
   return ajax({
     url: 'https://beo.firebaseio.com/ombr/theme.json',
     method: 'put',
+    type: 'json',
     data: '"' + e.item.title + '"'
   }, (function(data) {
     console.log('succes');
