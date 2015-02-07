@@ -1,18 +1,24 @@
-angular.module('frontend.login', [])
+angular.module('frontend.login', ['frontend.database'])
   .controller 'loginCtrl', ($scope, $localStorage, $stateParams, $ionicHistory, $state, $ionicLoading, database)->
-    user = $localStorage.user || {
-      username: ''
-      password: ''
-    }
+    console.log 'ICI !'
+    user = $localStorage.user || { username: '', password: '' }
     $scope.user = user
+    login_error =(msg)->
+      alert msg
+      $ionicLoading.hide()
+
+    root = database.$asObject()
     $scope.login = ()->
       $ionicLoading.show template: 'Loading...'
-      setTimeout (->
-        if user.username != '' and user.password != ''
-          $localStorage.user = user
-          $state.go('home')
-        else
-          alert 'Invalid user'
+      return login_error('Invalid Username') if user.username == ''
+      return login_error('Invalid Password') if user.password == ''
+      root.$loaded().then ->
+        if root[user.username] != undefined
+          console.log root[user.username].password, user.password
+          return login_error('Invalid Password') if root[user.username].password != user.password
+        $localStorage.user = user
+        root[user.username] = user
+        root.$save()
         $ionicLoading.hide()
-      ), 2000
+        $state.go('home')
     $ionicHistory.nextViewOptions disableBack: true
