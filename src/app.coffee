@@ -13,6 +13,7 @@ menu = new (UI.Menu)(
   ]
 )
 menu.on 'select', (e)->
+  console.log '"'+e.item.title+'"'
   ajax({
     url: 'https://beo.firebaseio.com/ombr/theme.json',
     method: 'put',

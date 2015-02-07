@@ -23,6 +23,7 @@ menu = new UI.Menu({
 });
 
 menu.on('select', function(e) {
+  console.log('"' + e.item.title + '"');
   return ajax({
     url: 'https://beo.firebaseio.com/ombr/theme.json',
     method: 'put',
