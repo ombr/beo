@@ -3,11 +3,21 @@ ion-view#login view-title="Hello, {{ user.username }}" cache-view="false"
     .list
       .item.padding
         button.button.button-block ng-click="login_deezer()" Login on deezer
+      label.item.item-radio
+        input type="radio" name="theme" value="Nature" ng-model="root.theme"
+        .item-content
+          | Nature
+        i.radio-icon.ion-checkmark
 
-      .item
-        | {{ root.volume }}
+      label.item.item-radio
+        input type="radio" name="theme" value="Pop" ng-model="root.theme"
+        .item-content
+          | Pop
+        i.radio-icon.ion-checkmark
+
+
       .item.range.range-royal
-        i.icon.icon-volume-low
+        i.icon.ion-volume-low
         input type="range" name="volume" ng-model="root.volume" min="0" max="100"
-        i.icon.icon-volume-high
+        i.icon.ion-volume-high
 

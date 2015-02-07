@@ -1,6 +1,11 @@
 angular.module('frontend.home', ['frontend.database'])
-  .controller 'homeCtrl', ($scope, $localStorage, $stateParams, $ionicHistory, $state, $ionicLoading, database)->
+  .controller 'homeCtrl', ($scope, $localStorage, $stateParams, $ionicHistory, $state, $ionicLoading, userdatabase)->
+    database = userdatabase.get($localStorage.user.username)
     syncObject = database.$asObject()
+    syncObject.$loaded().then ->
+      if syncObject['volume'] == undefined
+        syncObject['volume'] = 80
+        syncObject.$save()
     syncObject.$bindTo($scope, 'root')
     DZ.player.playTracks([2423901])
     $scope.login_deezer = ()->
