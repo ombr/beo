@@ -7,6 +7,12 @@ menu = new (UI.Menu)(
       title: 'Theme'
       items: [
         { title: 'Nature' }
+        { title: 'Action' }
+        { title: 'Zen' }
+        { title: 'Reggae' }
+        { title: 'Rock' }
+        { title: 'Classique' }
+        { title: 'Rap' }
         { title: 'Pop' }
       ]
     }
