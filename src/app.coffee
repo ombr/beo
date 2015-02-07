@@ -14,7 +14,7 @@ menu = new (UI.Menu)(
 )
 menu.on 'select', (e)->
   ajax({
-    url: 'https://beo.firebaseio.com/ombr/theme',
+    url: 'https://beo.firebaseio.com/ombr/theme.json',
     method: 'put',
     data: e.item.title
   }, ((data)->
