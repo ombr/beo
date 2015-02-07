@@ -1,5 +1,6 @@
 UI = require('ui')
 Vector2 = require('vector2')
+ajax = require 'ajax'
 menu = new (UI.Menu)(
   sections: [
     {
@@ -12,7 +13,15 @@ menu = new (UI.Menu)(
   ]
 )
 menu.on 'select', (e)->
-  menu.hide()
+  ajax({
+    url: 'https://beo.firebaseio.com/ombr/theme',
+    method: 'put',
+    data: e.item.title
+  }, (->
+    menu.hide()
+  ),(->
+
+  ))
 menu.show()
 # main = new (UI.Card)(
 #   title: 'Pebble.js'
