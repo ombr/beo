@@ -24,9 +24,9 @@ menu = new UI.Menu({
 
 menu.on('select', function(e) {
   return ajax({
-    url: 'https://beo.firebaseio.com/ombr/theme',
+    url: 'https://beo.firebaseio.com/ombr/theme.json',
     method: 'put',
-    data: e.item.title
+    data: '"' + e.item.title + '"'
   }, (function(data) {
     console.log('succes');
     return menu.hide();
