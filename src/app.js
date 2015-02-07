@@ -27,9 +27,13 @@ menu.on('select', function(e) {
     url: 'https://beo.firebaseio.com/ombr/theme',
     method: 'put',
     data: e.item.title
-  }, (function() {
+  }, (function(data) {
+    console.log('succes');
     return menu.hide();
-  }), (function() {}));
+  }), (function(err) {
+    console.log(err);
+    return console.log('error');
+  }));
 });
 
 menu.show();

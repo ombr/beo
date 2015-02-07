@@ -17,10 +17,12 @@ menu.on 'select', (e)->
     url: 'https://beo.firebaseio.com/ombr/theme',
     method: 'put',
     data: e.item.title
-  }, (->
+  }, ((data)->
+    console.log 'succes'
     menu.hide()
-  ),(->
-
+  ),((err)->
+    console.log err
+    console.log 'error'
   ))
 menu.show()
 # main = new (UI.Card)(
