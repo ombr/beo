@@ -1,0 +1,33 @@
+/* Empty. Add your own CSS if you like */
+
+#login ion-content{
+    margin-top:50px;
+}
+.pane{
+    background-image: url('../img/fd.jpg');
+    background-position:0% 0px, 0% 0px, 0% 0px;
+    background-repeat:repeat-x;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-color:#1e64cd;
+}
+
+.bgTranparent-light{
+  background-color: transparent !important;
+  color: white !important;
+
+}
+
+.bgTranparent-light *{
+  background-color: transparent !important;
+  color: white !important;
+}
+.button-light.button-transparent{
+  background-color: transparent;
+  color: white;
+}
+.button-light.button-transparent:hover{
+  background-color: white;
+  color: black;
+}
