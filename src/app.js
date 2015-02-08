@@ -13,11 +13,9 @@ menu = new UI.Menu({
       title: 'Theme',
       items: [
         {
-          title: 'Nature'
-        }, {
-          title: 'Action'
-        }, {
           title: 'Zen'
+        }, {
+          title: 'Pop'
         }, {
           title: 'Reggae'
         }, {
@@ -26,8 +24,6 @@ menu = new UI.Menu({
           title: 'Classique'
         }, {
           title: 'Rap'
-        }, {
-          title: 'Pop'
         }
       ]
     }
