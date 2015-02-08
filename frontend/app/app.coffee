@@ -42,4 +42,18 @@ angular.module('frontend', ['ionic',
             console.log 'Deezer loaded !'
         }
       )
+      # window.plugins.Pebble.setAppUUID '23c7ad54-cd44-41fc-ab6a-2a8dfcb1cabb', (->
+      #   alert 'ICI'
+      #   window.plugins.Pebble.launchApp ((res)->
+      #     console.log "LAUNCH APP"
+      #     alert res
+      #   ),((err)->
+      #     alert err
+      #   )
+      #   console.log 'watch'
+      #   alert 'watch connected'
+      # ), (->
+      #   console.log 'watch disconected'
+      #   alert 'watch disconected !'
+      # )
   .service

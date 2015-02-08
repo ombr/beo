@@ -1,20 +1,11 @@
 ion-view#login view-title="Hello, {{ user.username }}" cache-view="false"
   ion-content
     .list
-      .item.padding
-        button.button.button-block ng-click="login_deezer()" Login on deezer
-      label.item.item-radio
-        input type="radio" name="theme" value="Nature" ng-model="root.theme"
+      label.item.item-radio ng-repeat="(style, playlist) in styles"
+        input type="radio" name="theme" value="{{style}}" ng-model="root.theme"
         .item-content
-          | Nature
+          | {{ style }}
         i.radio-icon.ion-checkmark
-
-      label.item.item-radio
-        input type="radio" name="theme" value="Pop" ng-model="root.theme"
-        .item-content
-          | Pop
-        i.radio-icon.ion-checkmark
-
 
       .item.range.range-royal
         i.icon.ion-volume-low
