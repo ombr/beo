@@ -32,8 +32,9 @@ angular.module('frontend', ['ionic',
   .run ($ionicPlatform) ->
     $ionicPlatform.ready ->
       ionic.Platform.fullScreen(true, false)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar true  if window.cordova and window.cordova.plugins.Keyboard
       StatusBar.hide()  if window.StatusBar
+  .run ($ionicPlatform)->
+    $ionicPlatform.ready ->
       DZ.init(
         appId  : '151761',
         channelUrl : 'http://developers.deezer.com/examples/channel.php'
