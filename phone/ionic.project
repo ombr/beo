@@ -1,6 +1,19 @@
 {
-  "name": "beo",
-  "app_id": "",
+  "name": "frontend",
+  "gulpStartupTasks": [
+    "templates",
+    "coffee",
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "app",
+    "templates",
+    "css",
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "app_id": "f7edb3ac",
   "browsers": [
     {
       "platform": "android",
