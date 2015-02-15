@@ -3,10 +3,9 @@
 
 Pour tester l'application pebble :
 
-login : demo
+login :ombr
 
-password: demo
-
+password: ombr
 
 - L'intégration de Withings est réalisée avec des webhooks sur firebase
 - L'intégration de MyFox arrive
